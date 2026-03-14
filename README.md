@@ -67,8 +67,8 @@ npm install
 Create `.env` inside `/server`
 
 ```
-DATABASE_URL=your_database_url
-JWT_SECRET=your_secret_key
+DATABASE_URL="postgresql://postgres:123bolaji@localhost:5432/inkspire"
+JWT_SECRET=inkspire_super_secret_key
 ```
 
 ### Run the project

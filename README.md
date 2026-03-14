@@ -87,7 +87,6 @@ npm start
 
 ## Screenshots
 
-(Add screenshots of your UI here later)
 ![alt text](image.png)
 ## Author
 

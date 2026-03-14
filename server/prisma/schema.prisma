@@ -1,0 +1,90 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Book {
+  id            Int      @id @default(autoincrement())
+  title         String
+  author        String
+  price         Float
+  discountPrice Float?
+  category      String?
+  rating        Float?
+  reviewCount   Int?
+  description   String?
+  image         String?
+  stock         Int?
+  pages         Int?
+  publisher     String?
+  language      String?
+  isbn          String?
+  format        String
+  isFeatured    Boolean?
+  samplePdf     String?
+
+  cartItems CartItem[]
+  orderItems OrderItem[]
+}
+
+model User {
+  id        Int        @id @default(autoincrement())
+  name      String
+  email     String     @unique
+  password  String
+  avatar    String?
+  createdAt DateTime   @default(now())
+
+  cartItems CartItem[]
+  orders    Order[]
+}
+
+model CartItem {
+  id       Int @id @default(autoincrement())
+  quantity Int @default(1)
+
+  userId Int
+  bookId Int
+
+  user User @relation(fields: [userId], references: [id])
+  book Book @relation(fields: [bookId], references: [id])
+
+  @@unique([userId, bookId])
+}
+
+model Order {
+  id        Int      @id @default(autoincrement())
+
+  fullName  String
+  address   String
+  city      String
+  phone     String
+  note      String?
+
+  total     Float
+  shipping  Float
+  status    String   @default("pending")
+
+  createdAt DateTime @default(now())
+
+  userId Int
+  user   User @relation(fields: [userId], references: [id])
+
+  items OrderItem[]
+}
+
+model OrderItem {
+  id       Int   @id @default(autoincrement())
+  quantity Int
+  price    Float
+
+  orderId Int
+  bookId  Int
+
+  order Order @relation(fields: [orderId], references: [id])
+  book  Book  @relation(fields: [bookId], references: [id])
+}

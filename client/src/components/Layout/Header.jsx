@@ -138,15 +138,7 @@ export default function Header() {
                 )}
               </Nav.Link>
 
-              {/* THEME TOGGLE */}
-              {/* <Button
-                onClick={toggleTheme}
-                variant="outline-warning"
-                className="rounded-pill d-flex align-items-center justify-content-center"
-                style={{ width: "42px", height: "42px" }}
-              >
-                {theme === "dark" ? <FaSun /> : <FaMoon />}
-              </Button> */}
+              
 
             </Nav>
 
@@ -162,11 +154,8 @@ export default function Header() {
         show={showOffcanvas}
         onHide={() => setShowOffcanvas(false)}
         placement="end"
-        className={`transition-navbar ${
-          theme === "dark"
-            ? "bg-dark text-light"
-            : "bg-light text-dark"
-        }`}
+        className={`transition-navbar 
+             bg-light text-dark`}
       >
 
         <Offcanvas.Header closeButton>
@@ -261,19 +250,6 @@ export default function Header() {
                 </Badge>
               )}
             </Nav.Link>
-
-            {/* <Button
-              onClick={toggleTheme}
-              variant={theme === "dark" ? "light" : "dark"}
-              className="rounded-pill mt-3 d-flex align-items-center justify-content-center"
-            >
-              {theme === "dark"
-                ? <FaSun className="me-1" />
-                : <FaMoon className="me-1" />}
-              {theme === "dark"
-                ? "Light Mode"
-                : "Dark Mode"}
-            </Button> */}
 
           </Nav>
 

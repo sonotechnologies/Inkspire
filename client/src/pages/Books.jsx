@@ -103,16 +103,15 @@ export default function BooksPage() {
     toast.success("Book added to cart 📚", { position: "top-center" });
   };
 
-  const cardBg = theme === "dark" ? "bg-dark text-light" : "bg-white text-dark";
-  const sidebarBg =
-    theme === "dark" ? "bg-secondary text-light" : "bg-light text-dark";
+  const cardBg ="bg-white text-dark";
+  const sidebarBg ="bg-light text-dark";
 
   return (
     <Container
       fluid
-      className={`py-5 ${theme === "dark" ? "bg-dark" : "bg-light"}`}
+      className={`py-5 bg-light`}
     >
-      <ToastContainer theme={theme === "dark" ? "dark" : "light"} />
+      <ToastContainer theme={ "light"} />
 
       <Row>
         {/* Sidebar */}
@@ -239,10 +238,7 @@ export default function BooksPage() {
                         <Button
                           as={Link}
                           to={`/books/${book.id}`}
-                          variant={
-                            theme === "dark"
-                              ? "secondary"
-                              : "outline-dark"
+                          variant={"outline-dark"
                           }
                           style={{ flex: 1 }}
                           onClick={() => navigate(`/books/${book.id}`)}

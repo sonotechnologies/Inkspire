@@ -116,7 +116,7 @@ export default function HomePage() {
 <Row className="align-items-center mb-5">
   <Col md={6}>
     <h1 className="display-3 fw-bold mb-3">
-      Where bolaji Stories Come Alive
+      Where Stories Come Alive
     </h1>
 
     <p className="lead opacity-75">

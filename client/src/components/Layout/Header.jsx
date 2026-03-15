@@ -2,13 +2,11 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Navbar, Nav, Container, Badge, Offcanvas, Button } from "react-bootstrap";
 import { FaShoppingCart, FaUser, FaMoon, FaSun, FaBars } from "react-icons/fa";
-import { useTheme } from "../../context/ThemeContext";
 import { useAuth } from "../../context/AuthContext";
 import { useCart } from "../../context/CartContext";
 
 export default function Header() {
 
-  const { theme, toggleTheme } = useTheme();
   const { isAuthenticated, user, logout } = useAuth();
   const { cartItems } = useCart();
 
@@ -26,9 +24,7 @@ export default function Header() {
   }, []);
 
   const bgClass = isSticky
-    ? theme === "dark"
-      ? "bg-dark shadow-lg backdrop-blur"
-      : "bg-white shadow-lg backdrop-blur"
+    ? "bg-white shadow-lg backdrop-blur"
     : "bg-transparent";
 
   const avatarUrl = user?.avatar
@@ -41,7 +37,7 @@ export default function Header() {
         expand="lg"
         fixed="top"
         className={`transition-navbar ${bgClass}`}
-        variant={theme === "dark" ? "dark" : "light"}
+        variant={"light"}
       >
         <Container>
 

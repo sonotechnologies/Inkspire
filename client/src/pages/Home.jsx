@@ -14,7 +14,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { useCart } from "../context/CartContext";
-import { useTheme } from "../context/ThemeContext";
 import { useAuth } from "../context/AuthContext";
 
 export default function HomePage() {
@@ -89,12 +88,9 @@ export default function HomePage() {
     },
   ];
 
-  const bgClass = theme === "dark" ? "bg-dark text-light" : "bg-light text-dark";
+  const bgClass = "bg-light text-dark";
 
-  const cardClass =
-    theme === "dark"
-      ? "bg-dark text-light border-0"
-      : "bg-white text-dark border-0";
+  const cardClass ="bg-white text-dark border-0";
 
   const buttonStyle = {
     background: "linear-gradient(45deg,#ffb347,#ffcc33)",
@@ -105,7 +101,7 @@ export default function HomePage() {
   return (
     <Container fluid className={`py-5 ${bgClass}`}>
 
-      <ToastContainer theme={theme === "dark" ? "dark" : "light"} />
+      <ToastContainer theme={"light"} />
 
       {loading ? (
         <>

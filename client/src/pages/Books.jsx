@@ -42,7 +42,7 @@ export default function BooksPage({ theme }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/books")
+      .get("https://inkspire-api-9xkt.onrender.com/books")
       .then((res) => {
         setBooksData(res.data);
         setCurrentPage(1); // reset pagination when books load

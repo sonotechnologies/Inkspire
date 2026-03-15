@@ -3,7 +3,7 @@ import axios from "axios";
 
 const AuthContext = createContext();
 
-const API = "http://localhost:5000";
+const API = "https://inkspire-api-9xkt.onrender.com";
 
 /*
 =========================

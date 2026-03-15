@@ -10,7 +10,7 @@ const app = express();
 const prisma = new PrismaClient();
 const path = require("path");
 
-app.use(cors());
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 
 /*

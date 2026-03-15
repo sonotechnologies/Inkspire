@@ -1,12 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-// import BookDetails from "./pages/BookDetails";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import InkspireNavbar from "./components/layout/Navbar";
 import BooksPage from "./pages/Books";
 import CartPage from "./pages/Cart";
-// import Footer from "./components/layout/Footer";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CheckoutPage from "./pages/Checkout";
 import { ToastContainer } from "react-toastify";
@@ -15,11 +12,12 @@ import BookDetails from "./pages/BookDetails";
 import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
 import ProfilePage from "./pages/Profile";
+import Navbar from "./components/Layout/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
-      <InkspireNavbar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/books" element={<BooksPage />} />
@@ -32,7 +30,6 @@ function App() {
         <Route path="/contact" element={<ContactPage/>}/>
         <Route path="/profile" element={<ProfilePage />} />
       </Routes>
-      {/* <Footer /> */}
       <ToastContainer position="top-right" autoClose={3000} />
     </BrowserRouter>
   );

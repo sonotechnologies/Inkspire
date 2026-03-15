@@ -6,7 +6,7 @@ import { useTheme } from "../../context/ThemeContext";
 import { useAuth } from "../../context/AuthContext";
 import { useCart } from "../../context/CartContext";
 
-export default function InkspireNavbar() {
+export default function Navbar() {
 
   const { theme, toggleTheme } = useTheme();
   const { isAuthenticated, user, logout } = useAuth();

@@ -179,11 +179,11 @@ export default function Header() {
             {!isAuthenticated ? (
               <>
               
-                  <Nav.Link as={NavLink} to="/about">
+                  <Nav.Link as={NavLink} to="/about" onClick={() => setShowOffcanvas(false)}>
                     About
                   </Nav.Link>
 
-                  <Nav.Link as={NavLink} to="/contact">
+                  <Nav.Link as={NavLink} to="/contact" onClick={() => setShowOffcanvas(false)}>
                     Contact
                   </Nav.Link>
                 <Nav.Link

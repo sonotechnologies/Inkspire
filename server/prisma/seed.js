@@ -1006,11 +1006,10 @@ const books = [
 ];
 
 async function main() {
-  for (const book of books) {
-    await prisma.book.create({
-      data: book
-    });
-  }
+  await prisma.book.createMany({
+    data: books,
+    skipDuplicates: true
+  });
 
   console.log("Books seeded successfully 📚");
 }

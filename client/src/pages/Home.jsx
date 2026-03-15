@@ -18,7 +18,6 @@ import { useAuth } from "../context/AuthContext";
 
 export default function HomePage() {
   const { addToCart } = useCart();
-  const { theme } = useTheme();
   const { isAuthenticated } = useAuth();
 
   const [loading, setLoading] = useState(true);
@@ -283,17 +282,15 @@ export default function HomePage() {
         backdropFilter: "blur(20px)",
         borderRadius: "22px",
         background:
-          theme === "dark"
-            ? "rgba(255,255,255,0.05)"
-            : "rgba(255,255,255,0.85)",
+             "rgba(255,255,255,0.85)",
         boxShadow: "0 25px 70px rgba(0,0,0,0.25)",
       }}
     >
-      <h3 className={`fw-bold mb-3 ${theme === "dark" ? "text-white" : ""}`}>
+      <h3 className={`fw-bold mb-3 `}>
         Join the Inkspire Community
       </h3>
 
-      <p className={`${theme === "dark" ? "text-light" : "text-muted"}`}>
+      <p className={`text-muted`}>
         Exclusive book drops and curated reading lists.
       </p>
 
@@ -304,8 +301,8 @@ export default function HomePage() {
           className="me-3"
           style={{
             borderRadius: "10px",
-            background: theme === "dark" ? "#1f1f1f" : "#fff",
-            color: theme === "dark" ? "#fff" : "#000",
+            background: "#fff",
+            color:"#000",
             border: "none",
           }}
         />

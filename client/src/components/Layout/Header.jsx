@@ -6,7 +6,7 @@ import { useTheme } from "../../context/ThemeContext";
 import { useAuth } from "../../context/AuthContext";
 import { useCart } from "../../context/CartContext";
 
-export default function Navbar() {
+export default function Header() {
 
   const { theme, toggleTheme } = useTheme();
   const { isAuthenticated, user, logout } = useAuth();

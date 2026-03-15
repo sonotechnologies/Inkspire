@@ -12,12 +12,12 @@ import BookDetails from "./pages/BookDetails";
 import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
 import ProfilePage from "./pages/Profile";
-import Navbar from "./components/Layout/Navbar";
+import Header from "./components/Layout/Header";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/books" element={<BooksPage />} />

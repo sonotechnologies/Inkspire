@@ -123,9 +123,9 @@ export default function HomePage() {
             </Col>
 
             <Col md={6}>
-              <img
+              <img 
                 src="https://images.unsplash.com/photo-1528207776546-365bb710ee93"
-                className="img-fluid rounded shadow-lg"
+                className="img-fluid rounded shadow-lg mt-4 mb-md-0"
               />
             </Col>
           </Row>
@@ -260,7 +260,7 @@ export default function HomePage() {
             <Col md={6}>
               <img
                 src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d"
-                className="img-fluid rounded shadow"
+                className="img-fluid rounded shadow mt-4 mb-md-0"
               />
             </Col>
           </Row>

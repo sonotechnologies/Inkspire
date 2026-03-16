@@ -65,31 +65,31 @@ export default function Header() {
 
             <Nav className="ms-auto align-items-center gap-3">
 
-              <Nav.Link as={NavLink} to="/books" className="fw-medium">
+              <Nav.Link style={{color: "#ffc107"}} as={NavLink} to="/books" className="fw-medium">
                 Books
               </Nav.Link>
 
               {!isAuthenticated ? (
                 <>
-                  <Nav.Link as={NavLink} to="/about">
+                  <Nav.Link style={{color: "#ffc107"}} as={NavLink} to="/about">
                     About
                   </Nav.Link>
 
-                  <Nav.Link as={NavLink} to="/contact">
+                  <Nav.Link style={{color: "#ffc107"}} as={NavLink} to="/contact">
                     Contact
                   </Nav.Link>
 
-                  <Nav.Link as={NavLink} to="/login">
+                  <Nav.Link style={{color: "#ffc107"}} as={NavLink} to="/login">
                     Login
                   </Nav.Link>
 
-                  <Nav.Link as={NavLink} to="/register">
+                  <Nav.Link style={{color: "#ffc107"}} as={NavLink} to="/register">
                     Register
                   </Nav.Link>
                 </>
               ) : (
                 <>
-                  <Nav.Link
+                  <Nav.Link style={{color: "#ffc107"}}
                     as={NavLink}
                     to="/profile"
                     className="d-flex align-items-center gap-2"
@@ -113,14 +113,14 @@ export default function Header() {
                     {user.name}
                   </Nav.Link>
 
-                  <Nav.Link onClick={logout}>
+                  <Nav.Link style={{color: "#ffc107"}} onClick={logout}>
                     Logout
                   </Nav.Link>
                 </>
               )}
 
               {/* CART */}
-              <Nav.Link
+              <Nav.Link style={{color: "#ffc107"}}
                 as={NavLink}
                 to="/cart"
                 className="position-relative"
@@ -168,7 +168,7 @@ export default function Header() {
 
           <Nav className="flex-column gap-3">
 
-            <Nav.Link
+            <Nav.Link style={{color: "#ffc107"}}
               as={NavLink}
               to="/books"
               onClick={() => setShowOffcanvas(false)}
@@ -179,14 +179,14 @@ export default function Header() {
             {!isAuthenticated ? (
               <>
               
-                  <Nav.Link as={NavLink} to="/about" onClick={() => setShowOffcanvas(false)}>
+                  <Nav.Link style={{color: "#ffc107"}} as={NavLink} to="/about" onClick={() => setShowOffcanvas(false)}>
                     About
                   </Nav.Link>
 
-                  <Nav.Link as={NavLink} to="/contact" onClick={() => setShowOffcanvas(false)}>
+                  <Nav.Link style={{color: "#ffc107"}} as={NavLink} to="/contact" onClick={() => setShowOffcanvas(false)}>
                     Contact
                   </Nav.Link>
-                <Nav.Link
+                <Nav.Link style={{color: "#ffc107"}}
                   as={NavLink}
                   to="/login"
                   onClick={() => setShowOffcanvas(false)}
@@ -194,7 +194,7 @@ export default function Header() {
                   Login
                 </Nav.Link>
 
-                <Nav.Link
+                <Nav.Link style={{color: "#ffc107"}}
                   as={NavLink}
                   to="/register"
                   onClick={() => setShowOffcanvas(false)}
@@ -204,7 +204,7 @@ export default function Header() {
               </>
             ) : (
               <>
-                <Nav.Link
+                <Nav.Link style={{color: "#ffc107"}}
                   as={NavLink}
                   to="/profile"
                   className="d-flex align-items-center gap-2"
@@ -229,7 +229,7 @@ export default function Header() {
                   {user.name}
                 </Nav.Link>
 
-                <Nav.Link
+                <Nav.Link style={{color: "#ffc107"}}
                   onClick={() => {
                     logout();
                     setShowOffcanvas(false);
@@ -240,7 +240,7 @@ export default function Header() {
               </>
             )}
 
-            <Nav.Link
+            <Nav.Link style={{color: "#ffc107"}}
               as={NavLink}
               to="/cart"
               className="position-relative"

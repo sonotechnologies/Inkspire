@@ -94,7 +94,7 @@ export default function HomePage() {
   };
 
   return (
-    <Container fluid className="py-5 bg-light text-dark">
+    <Container fluid className="py-5 bg-light text-dark"  style={{ overflowX: "hidden" }}>
 
       <ToastContainer theme={"light"} />
 
